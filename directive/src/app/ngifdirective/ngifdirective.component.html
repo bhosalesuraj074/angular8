@@ -1,0 +1,6 @@
+<div *ngIf="num % 2 === 0; else elsePart;">
+  <p [ngStyle]="{'color':'green','margin': '20px', 'padding':'20px 100px' ,'border':'1px solid red'}">Number Is Even</p>
+</div>
+<ng-template #elsePart>
+    <p [ngStyle]="{'color':'red','margin': '20px'}">Number is Odd</p>
+</ng-template>

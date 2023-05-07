@@ -1,0 +1,40 @@
+<!-- <div [ngStyle]="{'color': colorName, 'background-color': '#ddd'}">NgStyle example
+
+</div> -->
+
+
+<!-- <ul *ngFor="let p of people">
+    <li [ngClass]= "{
+            'text-success': p.country == 'UK',
+            'text-primary': p.country == 'USA',
+            'text-danger': p.country == 'HK'
+             }">
+            {{p.name}} ({{p.country}})
+    </li>
+</ul>   -->
+
+<nav class="navbar " [ngStyle]="{'background-color': '#2ee'}">
+    <a class="navbar-brand" href="#"> &nbsp; Structural directive</a>
+</nav>
+<h3 [ngStyle]="{'color':'red'}">Select the Checkbox </h3>
+<div class="container-fluid">
+
+    <input type="checkbox"  [(ngModel)]="isChecked" checked="isChecked"  name="check1">
+    <label  for="defaultCheck1">
+      &nbsp;&nbsp; Default checkbox
+    </label>
+
+
+  <div *ngIf ="isChecked ;else delete">
+  <ul *ngFor="let course of courses" >
+  <li [ngClass]="{
+     'text-success': course.courseName =='Java',
+     'text-primary': course.courseName =='Angular',
+     'text-danger' : course.courseName =='React'
+  }">
+   {{course.courseName}}
+  </li>
+</ul>
+  <div #delete></div>
+</div>
+</div>

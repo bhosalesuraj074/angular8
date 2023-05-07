@@ -1,0 +1,21 @@
+<div class="container row uk-overlay-background">
+<div class="col-md-5">
+    <label class="text-warning">Country</label>
+<select id="inputCountry" class="form-control" (change)="selectedCountry($event)">
+    <option selected value="default" > Choose the country</option>
+    <option value="india">India</option>
+    <option value="uk">UK</option>
+    <option value="us">US</option>
+  </select>
+</div>
+
+<div class="col-md-5">
+        
+        <label class="text-primary">State</label>
+        <select id="inputState" class="form-control">
+          <option selected value="default" > Choose the State</option>
+          <option *ngFor="let state of states" [value]="state" >{{state}}</option>
+    </select>
+</div>
+</div>
+

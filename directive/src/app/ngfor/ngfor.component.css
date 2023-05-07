@@ -1,0 +1,15 @@
+.form-select {
+    /* width: 200px; */
+    margin-left: 20px;
+  }
+
+  .form-select option {
+    background-color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+select {
+    width: 30%;
+}

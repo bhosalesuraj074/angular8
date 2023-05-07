@@ -1,0 +1,22 @@
+<p>ngfor works!</p>
+
+<label for="carSelect">Choose a car:</label>
+<select class="form-select form-select-lg mb-3">
+    <option value="" disabled>Select a Number</option>
+    <ng-container *ngFor="let car of cars">
+    <option *ngIf="car % 2 != 0"  [value]="car">
+     
+      {{car}}
+    
+    </option>
+  </ng-container>
+  </select>
+  
+  <div [ngSwitch]="colorName"> 
+  <p *ngSwitchCase = "'red'" style="color: red;">color is red</p>
+  <p *ngSwitchCase = "'green'" style="color: green;">color is green</p>
+  <p *ngSwitchDefault style="color: blue;">You selected default blue color</p>
+  </div>
+
+  
+  
