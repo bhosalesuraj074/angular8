@@ -1,0 +1,81 @@
+<div class="container py-5 ">
+  <div class="row justify-content-center  "  >
+    <div class="col-md-6 text-left rounded shadow py-5" style="border-radius: 40px; background-color: antiquewhite;">
+        <div class="text-center">
+          <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Registration form</h3>
+        </div>
+            <form class=""  #regForm ="ngForm" (ngSubmit)="registerDetails(regForm)">
+                <div class="form-group" >
+                    <label for="fname">First name</label>
+                    <input type = "text" class="form-control"    id="fname" name="fname" required placeholder="Enter the first name" 
+                    ngModel #fname="ngModel" [(ngModel)]="first" value="first">   
+                    <small   *ngIf =" fname.touched &&(first.length < 5 || first.length > 5)" class="text-danger"> First Name contain exact five letters eg. suraj</small>
+                </div>
+                <div class="form-group">
+                     <label for="lname">Last name</label>
+                     <input type="text"  class="form-control" id="lname" name="lname" required 
+                     placeholder="Enter the last name" ngModel #lname="ngModel" [(ngModel)]="last" value="last" > 
+                     <small   *ngIf="!lname.valid && lname.touched" class="text-danger">Enter the last name Please</small>     
+                     <small *ngIf =" (last?.length > 10)" class="text-danger">last name length should be less than ten</small> 
+                </div>
+                   <!-- <p>{{last.length}},{{len}}</p> -->
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" class="form-control" id="age" name="age" required placeholder="please enter the age" 
+                     ngModel  #ages="ngModel" [(ngModel)]= "Age" value="Age">
+                    <small *ngIf="ages.touched && Age < 17 || Age >20" class="text-danger">age must be between 17 to 20</small>
+                </div>   
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input email required type="text" class="form-control" id="email" name="email" 
+                    ngModel placeholder="Enter email" #email="ngModel" (blur)="emailOnChange(regForm)" >
+                    <small class="text-danger" *ngIf="  isValid && email.touched" >Enter the valid domain</small>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="text" minlength="10" maxlength="10" placeholder="please enter phone number" id="phone" name="phone" class="form-control" 
+                     ngModel [(ngModel)]="phoneNumber" value="phoneNumber" #myNumber="ngModel">
+                     <small *ngIf="!myNumber.valid && myNumber.touched" class="text-danger"> Please check your number</small>
+                </div>
+                <div class="form-group">
+                  <label>Gender:</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" [(ngModel)]="gender" required>
+                    <label class="form-check-label" for="male">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" [(ngModel)]="gender" required>
+                    <label class="form-check-label" for="female">Female</label>
+                  </div>
+                </div>
+                  
+                  <div class="form-group">
+                    <label for="pass1">Password</label>
+                    <input type="text" name="pass1" id="pass1" value="pass1" class="form-control" ngModel  [(ngModel)]="pass1" value="pass1"
+                     placeholder="please enter the password">
+                    <!-- <p>{{pass1}}</p>  -->
+                  </div>
+                  <div class="form-group">
+                    <label for="pass2">Confirm Password</label>
+                    <input type="text" name="pass2" id="pass2" value="pass2" class="form-control" ngModel  [(ngModel)]="pass2" value="pass2" #pas2="ngModel"                   placeholder="please confirm your password">
+                    <!-- <p>{{pass2}}</p>  -->
+                    <small *ngIf="pass1 != pass2 && pas2.touched" class="text-danger">Please check the password</small>
+                  </div>
+                
+          <button type="submit" class="btn btn-success mx-4 my-4 col-md-5">Submit</button>
+          <button type="reset" class="btn btn-danger mx-3 col-md-5">Reset</button> 
+        </form>  
+    
+        <div class="row justify-content-center" *ngIf="reg">
+          <h2>Form Data</h2>
+          <p>Full Name: {{reg.username}}</p>
+          <p>Email: {{reg.email}}</p>
+          <p>phone: {{reg.phone}}</p>
+          <p>Gender: {{reg.gender}} </p>
+          <!-- <p>password: {{reg.password}}</p> -->
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid rgb(172, 45, 45);
+    /* box-shadow: 0 0 13px #ff000021; */
+   
+    box-shadow: 1px 1.5px rgb(238, 142, 142)
+    
+}
+input.ng-valid.ng-touched
+{
+    border: 1px solid rgb(69, 192, 31);
+    box-shadow: 0 0 13px #ff000021;
+}
+img{
+    margin-left: 20px;
+
+    height: 30px;
+    height: 40px;
+}
+
+.form-group{
+    margin-top: 18px;
+}

@@ -1,0 +1,42 @@
+<div class="container-fluid" *ngIf="cakeInfo">
+    <div class="row justify-content-center  " >        
+       <div class=" row text-left rounded shadow py-5 col-md-10" style="border-radius: 40px;">
+
+         <div class="row">
+            <div class="col-md-4">
+                  <div class="">
+                    <h6 [innerHTML]="cakeInfo.title" style="font-family: Lucida Console, Courier, monospace;"></h6>
+                  </div>
+                  <hr>
+                  <div class="">
+                    <img [src]="cakeInfo.image" class="img-fluid" alt="" >
+                  </div>
+                  <div class="py-5">
+                     <button class="btn btn-outline-success">Add to Cart</button>
+                  </div>
+             </div>
+
+
+
+
+             <!-- ----------------------------------------------- -->
+            <div class="col">
+                 <div class="text-center">
+                    <h4 style="color: blueviolet;">Details of the cake</h4>
+                 </div>
+                 
+                 <div class="py-3">
+                    <p style="font-family: Times, Times New Roman, Georgia, serif;">🍰{{cakeInfo.description}}</p>
+                 </div>
+                 <div class="">
+                       <h4 style="color: rgb(255, 127, 223);">Ingredients</h4>
+                         <ul *ngFor="let item of cakeInfo.ingredients">
+                              <li>{{item}}</li>
+                         </ul>
+                 </div>
+                
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>

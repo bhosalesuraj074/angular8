@@ -1,0 +1,17 @@
+
+<nav class="container-fluid justify-content-end bg-dark">
+  
+  <ul class="nav nav-tabs justify-content-end" >
+    <li class="nav-item navbar-brand"><a routerLinkActive="active" routerLink="home" class="nav-link">CAKEMANIA</a></li>  
+    <li class="nav-item"><a routerLinkActive="active" routerLink="about-us" class="nav-link">About Us</a></li>
+    <li class="nav-item"><a routerLinkActive="active" routerLink="cakelist" class="nav-link">Cakes</a></li>
+    <li class="nav-item"><a routerLinkActive="active" routerLink="login" class="nav-link">Login</a></li>
+    <li class="nav-item"><a routerLinkActive="active myclass" routerLink="cart" class="nav-link">
+    <mat-icon matBadge="1" matBadgeSize="small" matBadgeColor="warn" class="badge-icon">shopping_cart</mat-icon>
+    <span class="mr-2">Cart</span>
+    </a></li>
+  </ul>
+
+</nav>
+
+<router-outlet></router-outlet>

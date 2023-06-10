@@ -1,0 +1,10 @@
+input.ng-invalid.ng-touched {
+    border: 1px solid rgb(172, 45, 45);
+    /* box-shadow: 0 0 13px #ff000021; */
+   
+    box-shadow: 1px 1.5px rgb(238, 142, 142)
+    
+}
+.form-group{
+   margin-top: 10px;
+}

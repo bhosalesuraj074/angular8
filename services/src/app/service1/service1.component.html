@@ -1,0 +1,5 @@
+<input type="date" [(ngModel)]="age">
+<button class="btn btn-primary" (click)="ageCalculator()">Calculate Age</button>
+<p *ngIf="age">{{showAge}}</p>
+
+<button class="btn btn-success" (click)="getJsonData()" >Get data</button>

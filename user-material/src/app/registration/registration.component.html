@@ -1,0 +1,195 @@
+<div class="container">
+    <div class="row justify-content-center mt-4">
+        <div class="text-left rounded shadow py-5">
+            <form [formGroup]="myUser" (ngSubmit)="OnSubmit()">
+            <div class="row">
+               <!-- this column for the user profile -->
+                <div class="col-md-2">
+                    <div class="mt-auto">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHkAAAB5CAMAAAAqJH57AAABDlBMVEX///86Ojz8wpUAAADILEDw8PAjIyY2Njj5qXIwMDHn6OkoKCktLS40NDUyMjT/xpi/Hi5bW1xOTU91dXY/P0CIiIlWVlf/ypv+6dn8v4/5pmv68Ord3t/HHjb4+PjV1teysrP949D7uYj6sn7+7uPNzc350bccHB+cnJ1oZ2gSExW6u7yAgIHFCSqmpqczOjtIOTsmPDyqMj2LMDtsNzyFZlBmTj09LSYgGxfosonMnXqZdlsdERF1WUawiGq9kXBVPzQvIh3s3dS9gVqCWT6TZUjblWb8zankq6PVaVTTh4+7AA7XlJzjxsm9AB3Yn6Xet7vl1NfQbXrSeoLOWWbLR1e3Lj+kTVIEIySSEiW3DNybAAAFp0lEQVRoge2aa1faSBjHGZJhco9cAkViiCAiIFrbqovWare7266XKlq77ff/IjuT6wwQ3HMmQ18s/zdqMmd+ea7zJG2hsNZaa6211lqCBSH0fgHWLw8lLLXqw5VyeyUpVX20OrAvsQL+isDtoTSriisa6jqDehXMgbHEutzbX8SMdCCSPFgCFmr1bGLNqC+uvvTlZMkRBXZfAEu6KKNfcLbASDsvkkW5e1lJhaoLIldjwPHxyelCckkQObL5t0kDy56cnZ/MkvuCyAfB7u8ndpHItu1G8ewCe+BckoZiye1g9w+NYirbnhxLk8npxYVQcoFsflpkZduXHxqTq8YVuYlEkQezJofsSdG+bBQ/4psDUeRRGuU52WcC67nwuyRdLeZiNS7E9bDt5ol0MefsRBNJmuyKIdvdTwvCnPr76lTptkSAveam8v4yI8zE3ed/KMorUeQ/z7LJ9odPgsiFXUX5awm5OFEURYi3C15HUZrZ4GJXUT4LARcKrzpKZxl5sygIXCjsNJeSi2J8HWp7CXlbIBfrcxa3KRiMG1kWWaSrA2WUVVNUWqfKMFq8yRlGNwWdFYxaC41eAXihv1fha6LdWXRTzEHxH9CiSzkTvTKLiahYd3ZWCS7sbHaiEHc3V5RdCVlRup1OF5/Jv4Ac6f9C9lrdGL3ZbK3miy90fadarvRanRC9OYG9Srnq+K7Qb75ez6noumGZVtuDuzi7lO4u9Nr4b0PXK05PmPGjel9FIFDbw/ry9xfyox1eQmpf0Pdmt96PsADVXA961zcbN7cF6Lm15Hq/LuCbr983QSyz4mre3c3GxsbN1NPcCnWn7+cN3isBQJE1zbv+islf7z1No8gAlPZyBuvU5ghhMnwYE/KdhskIUXf1XNEjGgxMVMe8KQZvyPgXrY5oo4GeY55pgDbKBCFZlr/L8jQgAxqNgJYbuarSNqkAlSEmb8myvIXJsIwAu6CaF9jt0/ti16IytvQuIJM4YzITadDPq7YGTBgtMEMmNpOrVDxy+jylDeldiWMD8kNAfghtZt0NhvlEes9gwBgTZFhKriMwY7SRS2V5FSaGxLiAfB+Q72My83ioksfh4ZaYPQMy6SQh+RaSTkJsZp6vlEeO+UwXMUySxrhvw9uA/ARx3yZtzWSM1v0cyPtMBDEEI2qYfB2QH0OygdhF1j4/2Kuzm1rE3bW2Bp8IWf4GtXaNhJ99PlTmDzSsMVuqYW33NPgYkJ+h1gsezWTrqsY/HLXZmgr3tzD5W0CWMTk0l7XaaHOTe3GChU4Pn0MdafBZDslwpFJ34tDoPW6yX2LIobcNH0bkLQh9g/J2TC753OSkg0XNO/jT2IMwNHlrCsMVBrMqjy6WFFX0M5g+DScmj6fQIVCksuQcyqoa75VYQ/atQhgm2PgOVq3U5GSVyX9Gl+PIxVVD2iQeDWLyQ3BIImtmFSrzgtPzIqlXNWjc03FEDto2fTMkc58ZcJ5MHFpzI/LWvVujnEyReVuJlrSwtKPg3c1eQu6Z9FyQrKrxDgcumiebCBiju4h8PTIANfUmqxDvOdm25sm4wIyDhHxg0PNIssribZ9J86TJeMp1HiLyk2PR03iyirt9pm8X9IBgokFElh/LzBtGupz3TcNfSEZW5TasZ/m5ZqKFZJ+TfJBuxbzhHF5H5O+H9HWULuf9f0TpyMuQ0eE/IVh+w5BTm7mPDGcxGRy+jchvD+nLqc0G7z9G76sZ5HcR+V0GWeU9rKpJrerM2xV4HZFfM1fNhGzxHlaDLPJRRD7KIvO+1aXvkTo71x69CROMJVsJmft9MjmeZ8lRirEJRpF5D2hqztfZgTpKMTbBgJqS63wHdDY5SjE2wXIkp4PBHPloQYLRZM7RAIJ+KZI0LDH68XM8Hv/8wV4cSvFvfcA5lMAlarVay27zgddaa6211lor0r+ZhojAPI7m/AAAAABJRU5ErkJggg==" alt="user image">
+                    </div>
+                    <div>
+                    <div class="name">
+                           <h5> Suraj Bhosale </h5>
+                    </div>    
+                    </div>
+                    <div class="lol">
+                       <p class="text-justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores earum expedita esse quasi, laboriosam, magni nulla provident ad, est quod dicta. Est vel corporis eligendi debitis neque modi voluptate error.</p>
+                    </div>
+                </div> 
+                <!-- end of the first column -->
+
+                <!-- starting  the second column for the userDetails -->
+               <div class="col-md-5">
+                <div><h5>User Details</h5></div>
+                <div formGroupName="userDetails">
+
+                    <div class="form-group">    
+                       <div>
+                        <mat-form-field class="" style="width: 90%;">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput placeholder="Ex. Elon Musk" formControlName="fullname" required>
+                            <mat-icon matSuffix>face</mat-icon>
+                        </mat-form-field>
+                        </div>
+                        <small class="text-danger" *ngIf="!myUser.get('userDetails.fullname').valid && myUser.get('userDetails.fullname').touched">
+                            <small class="text-danger" *ngIf="myUser.get('userDetails.fullname').errors['required']">plese enter the full name</small>
+                        </small>
+                       
+                    </div>
+                     <div class="form-group">
+                        <div>
+                        <mat-form-field style="width: 90%;">
+                            <mat-label>Birth of Date</mat-label>
+                            <input matInput [matDatepicker]="picker" formControlName="birthday" required>
+                            <mat-datepicker-toggle matIconSuffix [for]="picker">calender</mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                          </mat-form-field>
+                          </div>
+                          <small class="text-danger" *ngIf="!myUser.get('userDetails.birthday').valid && myUser.get('userDetails.birthday').touched">
+                            <small class="text-danger" *ngIf="myUser.get('userDetails.birthday').errors['required']">please select the date</small>
+                        </small>
+                     </div>      
+                     <div class="form-group">
+                        <div>
+                        <mat-form-field style="width: 90%;">
+                            <mat-label>Select gender</mat-label>
+                            <mat-select formControlName="gender"  required>
+                              <mat-option *ngFor="let gender of genders" [value]="gender.value" >
+                                {{gender.value}}
+                              </mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          </div>
+                          <small class="text-danger" *ngIf="!myUser.get('userDetails.gender').valid && myUser.get('userDetails.gender').touched">
+                            <small class="text-danger" *ngIf="myUser.get('userDetails.gender').errors['required']">please select the gender</small>
+                        </small>
+                     </div>
+                     <div formGroupName="contact">
+                     <div class="row">
+                            <div class="form-group col-md-4">
+                                <div>
+                                <mat-form-field style="width: 100%;">
+                                    <mat-label>select country</mat-label>
+                                    <mat-select formControlName="country" required (selectionChange)="setCountry()">
+                                      <mat-option *ngFor="let country of countries" [value]="country.name">
+                                        {{country.name}}
+                                      </mat-option>
+                                    </mat-select>
+                                         
+                                  </mat-form-field>
+                                  </div>
+                                  <small class="text-danger" *ngIf="!myUser.get('userDetails.contact.country').valid && myUser.get('userDetails.contact.country').touched">
+                                    <small class="text-danger" *ngIf="myUser.get('userDetails.contact.country').errors['required']">select country</small>
+                                </small>
+                            </div>
+                            <div class="form-group col">
+                                <div>
+                                <mat-form-field class="" style="width: 85%;">
+                                    <mat-label>phone</mat-label>
+                                    
+                                    <input matInput placeholder-="Ex. 9876543210"  formControlName="phone" required value="">
+                                    <mat-icon matSuffix>phone</mat-icon>
+                                    
+                                </mat-form-field>
+                                </div>
+                                <small class="text-danger" *ngIf="!myUser.get('userDetails.contact.phone').valid && myUser.get('userDetails.contact.phone').touched">
+                                    <small class="text-danger" *ngIf="myUser.get('userDetails.contact.phone').errors['required']">please enter the number</small>
+
+                                </small>
+                            </div>
+
+                     </div>
+                     </div>
+                     <div  class="form-group">
+                        <mat-form-field  style="width:90%;">
+                            <mat-label>Textarea</mat-label>
+                            <textarea matInput #len maxlength="265"  placeholder="Tell about yourself" formControlName="bio"></textarea>
+                            
+                            <mat-hint>Tell about yourself</mat-hint>
+                            <mat-hint align="end">{{len.value.length}}/256</mat-hint>
+                          </mat-form-field>
+                     </div>
+                  
+                </div>
+               </div>
+               <!-- second column done -->
+
+               <!-- third column start -->
+               <div class="col-md-5 " >
+                <div><h5>Account Details</h5></div>
+                <div formGroupName="accountDetails">
+                    <div class="form-group">
+                        <div>
+                        <mat-form-field  style="width: 90%;">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Ex. surajbhosale74" formControlName="username" required>
+                            <mat-icon matSuffix>account_circle</mat-icon>
+                        </mat-form-field>
+                        </div>
+                        <small class="text-danger" *ngIf="!myUser.get('accountDetails.username').valid && myUser.get('accountDetails.username').touched">
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.username').errors['required']">please enter the username</small>
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.username').errors['StartWithNumber']">username not startwith number</small>
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.username').errors['LengthNotValid']">username contains atleast 5 letter</small> 
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.username').errors['FormatNotValid']">speacial charter doesn't allowed  </small>
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                        <mat-form-field  style="width: 90%;">
+                            <mat-label>email</mat-label>
+                            <input matInput placeholder="Ex. user@gmail.com" formControlName="email" required>
+                            <mat-icon matSuffix>email</mat-icon>
+                        </mat-form-field>
+                        </div>
+                        <small class="text-danger" *ngIf="!myUser.get('accountDetails.email').valid && myUser.get('accountDetails.email').touched">
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.email').errors['required']">please enter email</small>
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.email').errors['EmailNotValid']">please enter valid email</small>
+                            
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                        <mat-form-field style="width: 90%;">
+                            <mat-label>Password</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" >
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" >
+                              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                          </mat-form-field>
+                        </div>
+                        <small class="text-danger" *ngIf="!myUser.get('accountDetails.password').valid && myUser.get('accountDetails.password').touched">
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.password').errors['required']">please enter password</small>
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.password').errors['InvalidPassword']">your password must containe atleast one Uppercase and Speacial chacter</small>
+
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                        <mat-form-field style="width: 90%;">
+                            <mat-label>Confirm password</mat-label>
+                            <input matInput [type]="rehide ? 'password' : 'text'" formControlName="repassword">
+                            <button mat-icon-button matSuffix (click)="rehide = !rehide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                              <mat-icon>{{rehide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                          </mat-form-field>
+                        </div>
+                        <small class="text-danger" *ngIf="!myUser.get('accountDetails.repassword').valid && myUser.get('accountDetails.repassword').touched">
+                            <small class="text-danger" *ngIf="myUser.get('accountDetails.repassword').errors['PasswordNotMatch']">please check Password</small>
+                        </small>
+                    </div>
+                    <div>
+                        <section class="example-section">
+                            <mat-checkbox class="example-margin">I accept terms and condtion</mat-checkbox>
+                          </section>
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-5">Submit</button>
+                </div>
+               </div>
+            </div>
+            
+        </form>
+        </div>
+    </div>
+</div>
