@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row justify-content-center py-4">
+        
+        <ng-container *ngFor="let cake of cakes">
+     
+            <div class="col-md-3 mb-4 ">
+           <div class="card shadow rounded" style="width: 15rem;">
+           <img [src]="cake.imgUrl" class="card-img-top" alt="...">
+           <div class="card-body">
+           <b><p style="font-size: 12px" class="truncate-paragraph">{{cake.title}}</p></b>
+           <a class="btn btn-danger" (click)="remove(cake.id)">remove</a> &nbsp; &nbsp;&nbsp;
+           <a [routerLink]="['/cakedetails', cake.id]" class="btn btn-primary">view cake</a>
+        </div>
+        </div>
+      </div>
+      </ng-container>
+      
+    </div>
+    </div>

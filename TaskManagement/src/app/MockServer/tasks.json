@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "task": "Create registration form UI",
+      "date": "6/21/2023",
+      "status": true,
+      "id": 1
+    },
+    {
+      "task": " Implement backend API for user registration",
+      "date": "6/26/2023",
+      "status": false,
+      "id": 2
+    },
+    {
+      "task": "Implement API endpoints for filtering data",
+      "date": "7/28/2023",
+      "status": false,
+      "id": 3
+    },
+    {
+      "task": "Document performance improvements achieved",
+      "date": "8/31/2023",
+      "status": true,
+      "id": 4
+    }
+  ]
+}

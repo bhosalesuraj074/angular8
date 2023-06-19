@@ -1,0 +1,21 @@
+.img {
+    border-radius: 30%;
+    
+}
+.mytext {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
+  
+  .mytext strong {
+    font-weight: bold;
+  }
+  
+  .mytext p {
+   
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,9 @@
+img{
+    height: 200px;
+    width: 238px;
+}
+.truncate-paragraph {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,12 @@
+img{
+    height: 70px;
+    width: 95px;
+    border-radius: 50%;
+}
+.header-cell {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+  }
+  

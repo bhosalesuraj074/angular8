@@ -1,0 +1,37 @@
+<div class="container-fluid" *ngIf="cakeInfo">
+    <div class="row justify-content-center">
+      <div class="row text-left rounded shadow py-5 col-md-10 cake-details">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="cake-info">
+              <h6 [innerHTML]="cakeInfo.title" class="cake-title"></h6>
+            </div>
+            <hr class="divider">
+            <div class="cake-image-container">
+              <img [src]="cakeInfo.image" class="img-fluid cake-image" alt="">
+            </div>
+            <div class="py-5">
+              <button class="btn btn-outline-success add-to-cart-btn" (click)="addToCart(cakeInfo.id,cakeInfo.image,cakeInfo.title)">Add to Cart</button>
+            </div>
+          </div>
+  
+          <div class="col separator">
+            <div class="">
+              <h4 class="cake-details-title">Details of the cake</h4>
+            </div>
+  
+            <div class="py-3">
+              <p class="cake-description">🍰{{cakeInfo.description}}</p>
+            </div>
+            <div>
+              <h4 class="ingredients-title">Ingredients</h4>
+              <ul class="ingredients-list" *ngFor="let item of cakeInfo.ingredients">
+                <li>{{item}}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -7,13 +7,15 @@ import { Service1Component } from './service1/service1.component';
 import { FormsModule } from '@angular/forms';
 import { TodoComponent } from './todo/todo.component';
 import { AddressComponent } from './address/address.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Service1Component,
     TodoComponent,
-    AddressComponent
+    AddressComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
