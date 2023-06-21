@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(value: any,search :any): any {
-    // this return for the return all the pendding tasks
+    // this return for the return all the complte tasks
     if(search == 'true')
      {
        return value.filter(val=>{
