@@ -10,7 +10,6 @@ export class CartComponent implements OnInit {
 
   cakes :any =[];
   constructor(private user: UsersService){ }
-
   ngOnInit() {
      this.getItems();
   }
