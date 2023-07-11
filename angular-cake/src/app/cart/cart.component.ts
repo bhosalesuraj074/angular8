@@ -24,7 +24,7 @@ export class CartComponent implements OnInit {
   }
   remove(id){
     this.user.deleteItemById(id).subscribe(res=>{
-      console.log('data delete');
+      console.log('data delete'+res);
       
     })
     this.getItems();

@@ -8,7 +8,7 @@ export class HeaderInterceptorService implements HttpInterceptor{
         
         let request = req.clone({
             setHeaders:{
-                'X-RapidAPI-Key': 'a356432fb5msh8cc581faab668ccp1f30e1jsn9f9c0cea3104',
+                'X-RapidAPI-Key': '38d64a2a1bmshb4d4947595c94edp196e22jsncc07eac18ada',
                 'X-RapidAPI-Host': 'the-birthday-cake-db.p.rapidapi.com'
             }
         })

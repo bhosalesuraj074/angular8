@@ -7,3 +7,10 @@ img{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+.element:hover {
+    transform: scale(1.05);
+  }
+  
+.element {
+    transition: transform 0.3s;
+  }
