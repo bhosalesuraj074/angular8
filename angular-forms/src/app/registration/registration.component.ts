@@ -33,11 +33,7 @@ registerDetails(form: NgForm)
      //this.reg.password = form.controls.pass1.value;
      console.log(form);
      form.reset();
-     
-    
-    
-
-     
+ 
 }
 
 isValid:boolean=false;

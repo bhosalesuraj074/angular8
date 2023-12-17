@@ -13,19 +13,9 @@
   ],
   "cart": [
     {
-      "id": "8",
-      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/8.jpg",
-      "title": "Chocolate cake with caramel poached pears and chocolate buttercream"
-    },
-    {
-      "id": "15",
-      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/15.jpg",
-      "title": "Sugarplum fairy cakes"
-    },
-    {
-      "id": "38",
-      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/38.jpg",
-      "title": "Daim bar layer cake"
+      "id": "2",
+      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/2.jpg",
+      "title": "Lemon and blackberry stripe cake"
     }
   ]
 }

@@ -34,7 +34,7 @@ export class ReactiveFormComponent implements OnInit {
   notAllowedNames = ['Codemind', 'Technology']; 
   createForm() {
     // this.myReactiveForm = new FormGroup({
-    //   'userDetails' : new FormGroup({
+    // 'userDetails' : new FormGroup({
     //     'username': new FormControl('', [Validators.required, this.NaNames.bind(this) ]) ,
     //     'email': new FormControl('',[Validators.required, Validators.email], this.NaEmails  ),
     //   }),     
@@ -61,7 +61,7 @@ export class ReactiveFormComponent implements OnInit {
     this.isSubmitted = true;
     console.log('my reactive form ', this.myReactiveForm)
   }
-  OnAddSkills() {
+  OnAddSkills(){
    (<FormArray>this.myReactiveForm.get('skills')).push(new FormControl('', Validators.required));
   }  
 
@@ -70,7 +70,7 @@ export class ReactiveFormComponent implements OnInit {
      return { 'namesNotAllowed': true }
     }return null;
   }
-   // This method will validate the email fileds 
+   // This method will validate the email fields 
   NaEmails(control: FormControl) : Promise<any> | Observable<any> {
     const myResponse = new Promise<any>((resolve, reject) => {
       setTimeout(() => {
