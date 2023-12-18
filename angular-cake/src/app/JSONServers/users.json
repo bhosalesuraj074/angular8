@@ -13,9 +13,19 @@
   ],
   "cart": [
     {
-      "id": "2",
-      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/2.jpg",
-      "title": "Lemon and blackberry stripe cake"
+      "id": "1",
+      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/1.jpg",
+      "title": "Raspberry and custard muffins"
+    },
+    {
+      "id": "11",
+      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/11.jpg",
+      "title": "Peanut butter drip cake"
+    },
+    {
+      "id": "13",
+      "imgUrl": "https://apipics.s3.amazonaws.com/cakes_api/13.jpg",
+      "title": "Baked lemon cheesecake with pineapple flowers"
     }
   ]
 }
