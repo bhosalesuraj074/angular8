@@ -3,15 +3,14 @@ import { MatDialog } from '@angular/material/dialog';
 import { EditComponent } from '../edit/edit.component';
 import { TasksService } from '../services/tasks.service';
 import { MatSnackBar } from '@angular/material';
-
 @Component({
   selector: 'app-task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
 export class TaskComponent implements OnInit {
-  allTasks;any =[];
-  selectedValue:string='null';
+ private allTasks;any =[];
+  private selectedValue:string='null';
   constructor(public dialog: MatDialog, private taskService: TasksService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {

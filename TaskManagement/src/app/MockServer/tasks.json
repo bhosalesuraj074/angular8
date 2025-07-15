@@ -4,25 +4,49 @@
       "task": "Create registration form UI",
       "date": "6/21/2023",
       "status": true,
-      "id": 1
+      "id": "1"
     },
     {
       "task": " Implement backend API for user registration",
       "date": "6/26/2023",
       "status": false,
-      "id": 2
+      "id": "2"
     },
     {
       "task": "Implement API endpoints for filtering data",
       "date": "7/28/2023",
       "status": false,
-      "id": 3
+      "id": "3"
     },
     {
       "task": "Document performance improvements achieved",
       "date": "8/31/2023",
       "status": true,
-      "id": 4
+      "id": "4"
+    },
+    {
+      "id": "314d",
+      "task": "learning Java Spring Boot",
+      "date": "7/11/2025",
+      "status": false
+    },
+    {
+      "id": "3a13",
+      "task": "Hibernate",
+      "date": "7/14/2025",
+      "status": false
+    },
+    {
+      "id": "6ef8",
+      "task": "Core Java",
+      "date": "7/4/2025",
+      "status": false
+    },
+    {
+      "id": "acbd",
+      "task": "Docker ",
+      "date": "7/16/2025",
+      "status": true
     }
   ]
 }
